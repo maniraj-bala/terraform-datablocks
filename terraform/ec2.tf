@@ -1,4 +1,4 @@
-data "aws_ami" "ami-test1" {
+data "aws_ami" "dev-testing" {
   most_recent = true
   owners      = ["self"]
   filter {
@@ -7,10 +7,10 @@ data "aws_ami" "ami-test1" {
   }
 }
 
-resource "aws_instance" "hemant" {
-  ami           = data.aws_ami.ami-test1.id
+resource "aws_instance" "web" {
+  ami           = data.aws_ami.dev-testing.id
   instance_type = var.machinetype
-  key_name      = "devjenkins"
+  key_name      = "devopsresearch&learn"
 
   tags = {
     Name = "HelloWorld"

@@ -1,8 +1,8 @@
 
 variable "value" {
-  default = ["ami-test*"]
+  default = ["dev-testing*"]
 }
 variable "machinetype" {
-  default = "t2.micro"
+  #default = "t2.micro"
 }
 
